@@ -1,0 +1,73 @@
+<table style="margin: auto">
+    <thead style="color: white;">
+        <tr>
+            <th style="padding-left: 15px;">Rodadas:</th>
+            <th colspan="3"> 
+                <span style="margin-right: 30px;">{{$ctrl.turns}}</span>
+                <span> Olá {{$ctrl.User.name}}</span>
+            </th>
+            <th colspan="3">
+                <button type="button" class="btn" ng-click="$ctrl.ChangePlayer()">Trocar Jogador</button>
+                <button type="button" class="btn" style="margin-right: 5px; margin-left: 5px;" ng-click="$ctrl.NewGame()">Reiniciar</button>
+                <button type="button" name="btnRanking" data-toggle="modal" data-target="#modalRanking" class="btn">Ranking</button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in $ctrl.cards">
+            <td ng-repeat="card in row">
+                <jm-card card="card"></jm-card>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot></tfoot>
+</table>
+
+<button type="button" style="display: none" id="btnShowModalGameOver" data-toggle="modal" data-target="#modalGameOver"></button>
+<div class="modal fade" id="modalGameOver" tabindex="-1" role="dialog" aria-labelledby="modalGameOverLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalGameOverLabel">Parabéns!!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Muito bem, você completou o jogo em apenas {{$ctrl.turns}} rodadas, dê uma olhada no ranking e desafie seus amigos!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.NewGame()" data-dismiss="modal">Reiniciar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRanking" tabindex="-1" role="dialog" aria-labelledby="modalRankingLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRankingLabel">Quadro dos Campeões</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" style="max-height: 300px; overflow-y: auto;">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="font-weight: bold;">
+                        Jogador
+                        <span style="float: right;">Turnos</span>
+                    </li>
+                    <li ng-repeat="user in $ctrl.rankList" class="list-group-item d-flex justify-content-between align-items-center">
+                        {{user.name}}
+                        <span class="badge badge-primary badge-pill">{{user.turns}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

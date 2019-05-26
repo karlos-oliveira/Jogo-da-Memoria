@@ -1,0 +1,10 @@
+<div class="flip-card">
+  <div class="flip-card-inner" ng-style="$ctrl.card.style" ng-click="$ctrl.flip()">
+    <div class="flip-card-front">
+        <img src="/app/assets/CORINGA.png" alt="Carta - Jogo da Memória" class="card-image">
+    </div>
+    <div class="flip-card-back">
+        <img src="{{$ctrl.card.src}}" alt="{{$ctrl.card.name}}" class="card-image">
+    </div>
+  </div>
+</div>
