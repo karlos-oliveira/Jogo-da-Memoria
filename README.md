@@ -8,6 +8,7 @@ Para rodar corretamente, o projeto precisa estar rodando em um web-server. Para 
 
 - Ter o NodeJS (v8+) instalado;
 - Abrir o cmd/powershell;
+- Clonar o repositorio que o projeto se encontra: "git clone https://github.com/karlos-oliveira/Jogo-da-Memoria.git";
 - Navegar até a pasta raiz onde se encontra o projeto;
 
 Ex: cd 'caminho\raiz\do\projeto'
