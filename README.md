@@ -18,6 +18,4 @@ Ex: cd 'caminho\raiz\do\projeto'
 - Abrir um navegador moderno e acessar o endereço "localhost:8080";
 - Divirta-se =]
 
-Caso não tenha (ou não queira) instalar o NodeJS, basta acessar o endereço abaixo para testar:
 
-https://www.coliveira.tech
