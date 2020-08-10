@@ -2,7 +2,7 @@
 Clássico jogo da memória desenvolvido utilizando AngularJS
 
 
-Instruções:
+**Instruções:**
 
 Para rodar corretamente, o projeto precisa estar rodando em um web-server. Para rodar localmente siga os passos abaixo:
 
@@ -19,3 +19,4 @@ Ex: cd 'caminho\raiz\do\projeto'
 - Divirta-se =]
 
 
+**Obs:** Caso não tenha ou não queira instalar o node, pode ver o resultado em https://jogomemoria.coliveira.dev/ =]
